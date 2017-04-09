@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<h3>Sup</h3>
-		<title>JavascriptXhtml</title>
+		<h3><nobr>Fellow Earthling,<wbr> the sum of your <wbr>chosen number is<nobr></h3>
+		<title>Project Euler 1</title>
 	</head>
 	<body>
 		<script type='text/javascript'>
-			document.write("hello <br />");
 			function sum3x5(num){
 				var x = 0;
 				var sum = 0;
-				while (x < num) {
+				while (x < num && num != null) {
 					//document.write(sum);
 					sum += x;
 					if (x%3 === 0 && (x%5 != 0 && x%5 > 2))
@@ -20,7 +19,8 @@
 				}
 				return sum;
 			}
-			var result = sum3x5(10);
+			var num = prompt("Hello, please input a number and I will compute the sum of all the multiples of 3 or 5 below it for you", "number");
+			var result = sum3x5(num);
 			document.write(result, "</br");
 		</script>
 	</body>
